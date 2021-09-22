@@ -1,0 +1,29 @@
+#include <iostream>
+#include <cstdio>
+#include <ctime>
+
+using namespace std;
+
+int main()
+{
+    
+    int answer;
+    int random;
+    srand((unsigned)time(0));
+     random = (rand()%9)+1;
+      int random2;
+    
+     random2 = (rand()%9)+1;
+     cout <<random<<" * "<<random2<<" = ";
+     cin >> answer;
+     if (answer == (random *random2)) {
+         cout <<"Correct\n";
+         main();
+     } else if (!cin) {
+         cout <<"Please choose a valid number";
+     } else {
+         cout <<"Incorrect\n";
+     }
+
+    return 0;
+}
